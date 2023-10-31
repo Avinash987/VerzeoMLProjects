@@ -1,50 +1,36 @@
-#------------------------------ MINI PROJECT  1  ---------------------------------
-#mtcars is directly available from R Studio need not read it as csv file
-# heead displays the first 6  observations
-head(mtcars)
-# tail displays the last 6  observations
-tail(mtcars)
-# dim displays the number of observations and variables in the given data set
-dim(mtcars)
-# import package descr
-library(descr)
-# descr(describe) gives the summary of given object
-descr(mtcars)
-# summary is function that produces summaries of results of various model fitting functions
-summary(mtcars)
-# plot histogram for mpg variable in mtcars dataset
-plot(mtcars$mpg, type = "h")
-# boxplot for mpg variable in mtcars dataset
-boxplot(mtcars$mp)
-# plot histogram for wtvariable in mtcars dataset
-plot(mtcars$wt, type = "h")
-# boxplot for wt variable in mtcars dataset
-boxplot(mtcars$wt)
-# freq() gives the frequency of the observations of variable am in mtcars
-freq(mtcars$am)
-# freq() gives the frequency of the observations of variable gear in mtcars
-freq(mtcars$gear)
-# freq() gives the frequency of the observations of variable carb in mtcars
-freq(mtcars$carb)
-# import gmodels for CrossTable
-library(gmodels)
-# CrossTable() of am over gear mtcars  
-CrossTable(mtcars$am,mtcars$gear, prop.chisq = FALSE)
-# CrossTable() of gear over carb mtcars 
-CrossTable(mtcars$gear,mtcars$carb, prop.chisq = FALSE)
-# covariance of mtcars
-cov(mtcars)
-# corellation of mtcars
-cor(mtcars)
-# barplot for am to gear in mtcars dataset
-barplot(mtcars$am,mtcars$gear)
-# barplot for gear to carb in mtcars dataset
-barplot(mtcars$gear,mtcars$carb)
-# order mpg by am
-by(mtcars$am,mtcars$mpg,order)
-# order mpg by gear
-by(mtcars$gear,mtcars$mpg,order)
-# order wt by am
-by(mtcars$am,mtcars$wt,order)
-# order wt by carb
-by(mtcars$carb,mtcars$wt,order)
+# Mini Project 1 - Exploratory Data Analysis with mtcars Dataset
+
+This mini project involves performing an exploratory data analysis on the `mtcars` dataset, which is readily available in R. The code provided demonstrates various data analysis and visualization techniques to gain insights into the dataset.
+
+## Data Overview
+- The code starts by displaying the first 6 and last 6 observations of the `mtcars` dataset using `head` and `tail`.
+- It uses `dim` to show the number of observations and variables in the dataset.
+
+## Data Summary
+- The `descr` and `summary` functions are used to provide a summary of the dataset.
+
+## Data Visualization
+- Histograms and boxplots are created for specific variables (`mpg` and `wt`) to visualize their distributions.
+- Barplots are generated to explore the relationships between variables (`am` and `gear`, `gear` and `carb`).
+
+## Frequency Analysis
+- The `freq` function is used to calculate the frequency of observations for specific variables (`am`, `gear`, and `carb`).
+
+## Cross-Tabulation
+- The `CrossTable` function from the `gmodels` library is employed to create cross-tabulations of variables (`am` vs. `gear`, `gear` vs. `carb`).
+
+## Covariance and Correlation
+- The `cov` and `cor` functions are used to calculate the covariance and correlation matrices of the dataset.
+
+## Sorting Data
+- Data is sorted and ordered using the `by` function, which provides insights into how variables relate to each other.
+
+## Dependencies
+- The code uses standard R functions and libraries such as `descr` and `gmodels` for statistical analysis and visualization. Ensure that these packages are installed.
+
+## Usage
+- The code can be executed in an R environment, and it provides a step-by-step walkthrough of the exploratory data analysis of the `mtcars` dataset.
+
+This mini project is meant to showcase basic data analysis techniques and is a useful starting point for those looking to explore a dataset using R.
+
+For any questions or further details, please refer to the code and comments provided in the script.
